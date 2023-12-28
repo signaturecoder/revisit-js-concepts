@@ -1,4 +1,4 @@
-# This repo is container for all the JavaScript Concepts which is used in regular programming.
+## This repo is container for all the JavaScript Concepts which is used in regular programming.
 
 ### Polyfills
 - Call, bind, apply
