@@ -46,3 +46,49 @@ function App() {
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))
+
+/**
+ *  Write a fn which accepts a fn and maximum no of times it is called, and once the limit is reached, it return the previous results only.
+ *
+ */
+
+//     function someFunc(fn, noOfTimes) {
+//         let a = 0;
+//         let result;
+//         if(typeof fn !== "function"){
+//             throw Error("It is not a function");
+//         }
+       
+//         return function(...args){
+//             // console.log("a", a + 12);
+//             a++;
+//             if(a <= noOfTimes) {
+//                 result = fn.apply(this, args);
+//                 return result;
+//             } else {
+//                 return result;
+//             }
+//         }
+//     }
+// // someFuct accepts some arguments (funct) and no. of times function could be called
+
+
+const someFuct = (fn) => {
+  const noOfArg =  fn.length; // 3
+
+   
+}
+
+
+
+
+
+// const myFunction = someFunc(multiply); // no of argu
+
+
+// console.log(myFunction(4)(5)(6)); // 9
+
+
+/**
+ * Ex 3: Dig deep into closures
+ */
