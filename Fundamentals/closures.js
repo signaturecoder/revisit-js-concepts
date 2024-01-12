@@ -83,3 +83,26 @@ console.log(someFunc(5, 6)); // 11
 console.log(someFunc(6, 7)); // 13
 
 console.log(someFunc(7, 8)); // 13
+
+
+// private variables and methods exposure 
+
+const counter = (function printDetails() {
+    let salary = 3000;
+
+    function changeBy(val) {
+        salary += val;
+    }
+
+    return {
+        increment() {
+            changeBy(1);
+        },
+
+        value() { return salary}
+    }
+})()
+
+counter.increment();
+counter.increment();
+console.log(counter.value());
