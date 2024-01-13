@@ -45,15 +45,19 @@ someFn(); // Sunny Kumar
 
 function sum(x) {
   return function (y) {
-    return x + y;
+    return function(z) {
+        return x + y + z;
+    };
   };
 }
 
-// const result = sum(4)(5);
-//console.log(result);
+// const result = sum(4)(5)(7);
+// console.log(result);
 
-// const result = sum(5)
-// console.log(result(4));
+// const sum5 = sum(5)
+// const sum4 = sum5(4);
+// const res = sum4(3);
+// console.log(res);
 
 /**
  *  Write a fn which accepts a fn and maximum no of times it is called, and once the limit is reached, it return the previous results only.
@@ -78,11 +82,11 @@ function myFunction(fn, limit) {
 
 const someFunc = myFunction(add, 3);
 
-console.log(someFunc(4, 5)); // 9
-console.log(someFunc(5, 6)); // 11
-console.log(someFunc(6, 7)); // 13
+// console.log(someFunc(4, 5)); // 9
+// console.log(someFunc(5, 6)); // 11
+// console.log(someFunc(6, 7)); // 13
 
-console.log(someFunc(7, 8)); // 13
+// console.log(someFunc(7, 8)); // 13
 
 
 // private variables and methods exposure 
@@ -105,4 +109,4 @@ const counter = (function printDetails() {
 
 counter.increment();
 counter.increment();
-console.log(counter.value());
+// console.log(counter.value()); 
