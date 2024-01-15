@@ -43,13 +43,13 @@ const someFn = sayHello();
 someFn(); // Sunny Kumar
 someFn(); // Sunny Kumar
 
-function sum(x) {
-  return function (y) {
-    return function(z) {
-        return x + y + z;
-    };
-  };
-}
+// function sum(x) {
+//   return function (y) {
+//     return function(z) {
+//         return x + y + z;
+//     };
+//   };
+// }
 
 // const result = sum(4)(5)(7);
 // console.log(result);
@@ -64,23 +64,23 @@ function sum(x) {
  *
  */
 
-const add = (a, b) => a + b;
+// const add = (a, b) => a + b;
 
-function myFunction(fn, limit) {
-  let counter = 0;
-  let result;
-  return function (...args) {
-    counter++;
-    if (counter > limit) {
-      return result;
-    } else {
-      result = fn.apply(this, args);
-      return result;
-    }
-  };
-}
+// function myFunction(fn, limit) {
+//   let counter = 0;
+//   let result;
+//   return function (...args) {
+//     counter++;
+//     if (counter > limit) {
+//       return result;
+//     } else {
+//       result = fn.apply(this, args);
+//       return result;
+//     }
+//   };
+// }
 
-const someFunc = myFunction(add, 3);
+// const someFunc = myFunction(add, 3);
 
 // console.log(someFunc(4, 5)); // 9
 // console.log(someFunc(5, 6)); // 11
