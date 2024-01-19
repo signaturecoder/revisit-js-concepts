@@ -48,6 +48,10 @@ function callAdd(a, b) {
     }, 5000);
 }
 
+/**
+ * Whenever JS sees await keyword, the function execution got suspended and come out of the fn to run other script till it wait 
+ * for the promise to be resolved. Once promise resolved then only next line will be executed.
+ */
 handlePromise();
 
 console.log(callAdd(6,5));
@@ -75,11 +79,11 @@ console.log(callAdd(6,5));
 /**
  * Actual Implementation
  */
-const API_URL = 'https://api.github.com/users/signaturecoder';
+// const API_URL = 'https://api.github.com/users/signaturecoder';
 
-async function handleActualPromise() {
-    const response = await fetch(API_URL);
-    const data = await response.json(); // response is a readableStread which need to be converted to json which is again a Promise basically
-    console.log(data);
-}
-handleActualPromise();
+// async function handleActualPromise() {
+//     const response = await fetch(API_URL);
+//     const data = await response.json(); // response is a readableStread which need to be converted to json which is again a Promise basically
+//     console.log(data);
+// }
+// handleActualPromise();
