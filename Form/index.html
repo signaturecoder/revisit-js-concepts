@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Understanding Form</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      input {
+        display: block;
+      }
+
+      button {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="username-id">Username</label>
+        <input
+          type="text"
+          id="username-id"
+          name="username"
+          minlength="4"
+        />
+      </div>
+      <div>
+        <label for="email-id">Email</label>
+        <input type="email" id="email-id" name="email" />
+      </div>
+      <div>
+        <label for="password-id">Password</label>
+        <input
+          type="password"
+          id="password-id"
+          name="password"
+          pattern=".{6,}"
+        />
+      </div>
+      <div>
+        <label for="confirm-password-id">Confirm Password</label>
+        <input
+          type="password"
+          id="confirm-password-id"
+          name="passwordConfirm"
+          pattern=".{6,}"
+        />
+      </div>
+      <button>Sign Up</button>
+    </form>
+    <script src="form.js"></script>
+  </body>
+</html>
