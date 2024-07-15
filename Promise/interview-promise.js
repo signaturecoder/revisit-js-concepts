@@ -31,30 +31,35 @@
  *             ---- reject, failure, rejected
  */
 
-const p1 = new Promise(function(resolve, reject){
-    setTimeout(() => resolve("P1 Resolved"), 3000);
-    // setTimeout(() => reject("P1 Failed"), 3000);
-});
+// const p1 = new Promise(function(resolve, reject){
+//     setTimeout(() => resolve("P1 Resolved"), 3000);
+//     // setTimeout(() => reject("P1 Failed"), 3000);
+// });
 
-const p2 = new Promise(function(resolve, reject){
-    // setTimeout(() => resolve("P2 Resolved"), 1000);
-    setTimeout(() => reject("P2 Failed"), 1000);
-});
+// const p2 = new Promise(function(resolve, reject){
+//     // setTimeout(() => resolve("P2 Resolved"), 1000);
+//     setTimeout(() => reject("P2 Failed"), 1000);
+// });
 
-const p3 = new Promise(function(resolve, reject){
-    setTimeout(() => resolve("P3 Resolved"), 2000);
-    // setTimeout(() => reject("P3 Failed"), 2000);
-});
+// const p3 = new Promise(function(resolve, reject){
+//     setTimeout(() => resolve("P3 Resolved"), 2000);
+//     // setTimeout(() => reject("P3 Failed"), 2000);
+// });
 
-// Promise.all([p1, p2, p3]).then(res => console.log(res)).catch(err => console.error(err));
+// // Promise.all([p1, p2, p3]).then(res => console.log(res)).catch(err => console.error(err));
 
-// Promise.allSettled([p1, p2, p3]).then(res => console.log(res)).catch(err => console.error(err));
+// // Promise.allSettled([p1, p2, p3]).then(res => console.log(res)).catch(err => console.error(err));
 
-// Promise.race([p1, p2, p3]).then(res => console.log(res)).catch(err => console.error(err));
+// // Promise.race([p1, p2, p3]).then(res => console.log(res)).catch(err => console.error(err));
 
-Promise.any([p1, p2, p3]).then(res => console.log(res)).catch(err => console.error(err.errors));
+// Promise.any([p1, p2, p3]).then(res => console.log(res)).catch(err => console.error(err.errors));
 
-// IF all promise got rejected, then you will get another object in err i.e err.errors
+// // IF all promise got rejected, then you will get another object in err i.e err.errors
 
 
 
+function getData() {
+    fetch('https://jsonplaceholder.typicode.com/posts/1').then(res => res.json()).then(data => console.log(data))
+  }
+  
+  getData();
